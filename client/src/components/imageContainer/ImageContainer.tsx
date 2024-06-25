@@ -9,7 +9,12 @@ interface ImageContainerProps {
 }
 
 // Define the ImageContainer functional component
-const ImageContainer: React.FC<ImageContainerProps> = ({ images, onImageClick }) => {
+const ImageContainer: React.FC<ImageContainerProps> = ({ images = [], onImageClick }) => {
+  if (!Array.isArray(images)) {
+    console.error('Expected images to be an array, but got:', images);
+    return null;
+  }
+
   return (
     <div className="image-container">
       {/* Map through the images array and render each image */}

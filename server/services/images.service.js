@@ -1,4 +1,4 @@
-const axios = require('axios'); // Import the Axios library for making HTTP requests
+const axios = require('axios'); // Import the axios library for making HTTP requests
 
 // Export a function named fetchImages, which accepts page and category as parameters
 exports.fetchImages = async (page, category) => {
